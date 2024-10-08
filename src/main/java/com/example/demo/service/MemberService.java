@@ -1,5 +1,5 @@
 package com.example.demo.service;
-import DTO.MemberFormDTO;
+import com.example.demo.DTO.MemberFormDTO;
 
 public interface MemberService {
 
