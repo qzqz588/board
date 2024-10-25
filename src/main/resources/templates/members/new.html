@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입</title>
+</head>
+<body>
+<div class="container">
+  <!-- form 태그의 action 경로를 타임리프 문법으로 변경 -->
+  <form th:action="@{/members}" method="post">
+    <div class="form_group">
+      <!-- 타임리프 필드 바인딩: th:field로 Spring Model 속성과 바인딩 -->
+      <label for="username">이름</label>
+      <input type="text" id="username" th:field="*{username}" placeholder="이름을 입력하세요.">
+
+      <label for="email">이메일</label>
+      <input type="email" id="email" th:field="*{email}" placeholder="이메일을 입력하세요.">
+
+      <label for="password">비밀번호</label>
+      <input type="password" id="password" th:field="*{password}" placeholder="비밀번호를 입력하세요.">
+
+      <button type="submit">회원가입</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
